@@ -1,0 +1,33 @@
+{
+  "name": "Electronics Telecom - Graphite & Blue",
+  "dataColors": [
+    "#2E6FAD",
+    "#65A4D2",
+    "#C39A52",
+    "#6776AE",
+    "#A5B6A0",
+    "#A47D72",
+    "#7A8580",
+    "#C2BDB5"
+  ],
+  "background": "#F3F3F0",
+  "foreground": "#303638",
+  "tableAccent": "#2E6FAD",
+  "textClasses": {
+    "title": {
+      "fontFace": "Segoe UI Semibold",
+      "color": "#303638",
+      "fontSize": 16
+    },
+    "label": {
+      "fontFace": "Segoe UI",
+      "color": "#626B6B",
+      "fontSize": 10
+    },
+    "callout": {
+      "fontFace": "Segoe UI Semibold",
+      "color": "#303638",
+      "fontSize": 30
+    }
+  }
+}

@@ -1,0 +1,228 @@
+country_code,country_name,country_iso2,country_iso3,region,map_eligible
+4,Afghanistan,AF,AFG,Asia,true
+8,Albania,AL,ALB,Europe,true
+12,Algeria,DZ,DZA,Africa,true
+16,American Samoa,AS,ASM,Oceania,true
+20,Andorra,AD,AND,Europe,true
+24,Angola,AO,AGO,Africa,true
+28,Antigua and Barbuda,AG,ATG,Americas,true
+31,Azerbaijan,AZ,AZE,Asia,true
+32,Argentina,AR,ARG,Americas,true
+36,Australia,AU,AUS,Oceania,true
+40,Austria,AT,AUT,Europe,true
+44,Bahamas,BS,BHS,Americas,true
+48,Bahrain,BH,BHR,Asia,true
+50,Bangladesh,BD,BGD,Asia,true
+51,Armenia,AM,ARM,Asia,true
+52,Barbados,BB,BRB,Americas,true
+56,Belgium,BE,BEL,Europe,true
+60,Bermuda,BM,BMU,Americas,true
+64,Bhutan,BT,BTN,Asia,true
+68,Bolivia (Plurinational State of),BO,BOL,Americas,true
+70,Bosnia Herzegovina,BA,BIH,Europe,true
+72,Botswana,BW,BWA,Africa,true
+76,Brazil,BR,BRA,Americas,true
+84,Belize,BZ,BLZ,Americas,true
+86,Br. Indian Ocean Terr.,IO,IOT,Africa,true
+90,Solomon Isds,SB,SLB,Oceania,true
+92,Br. Virgin Isds,VG,VGB,Americas,true
+96,Brunei Darussalam,BN,BRN,Asia,true
+100,Bulgaria,BG,BGR,Europe,true
+104,Myanmar,MM,MMR,Asia,true
+108,Burundi,BI,BDI,Africa,true
+112,Belarus,BY,BLR,Europe,true
+116,Cambodia,KH,KHM,Asia,true
+120,Cameroon,CM,CMR,Africa,true
+124,Canada,CA,CAN,Americas,true
+132,Cabo Verde,CV,CPV,Africa,true
+136,Cayman Isds,KY,CYM,Americas,true
+140,Central African Rep.,CF,CAF,Africa,true
+144,Sri Lanka,LK,LKA,Asia,true
+148,Chad,TD,TCD,Africa,true
+152,Chile,CL,CHL,Americas,true
+156,China,CN,CHN,Asia,true
+162,Christmas Isds,CX,CXR,Oceania,true
+166,Cocos Isds,CC,CCK,Oceania,true
+170,Colombia,CO,COL,Americas,true
+174,Comoros,KM,COM,Africa,true
+175,Mayotte (Overseas France),YT,MYT,Africa,true
+178,Congo,CG,COG,Africa,true
+180,Dem. Rep. of the Congo,CD,COD,Africa,true
+184,Cook Isds,CK,COK,Oceania,true
+188,Costa Rica,CR,CRI,Americas,true
+191,Croatia,HR,HRV,Europe,true
+192,Cuba,CU,CUB,Americas,true
+196,Cyprus,CY,CYP,Asia,true
+203,Czechia,CZ,CZE,Europe,true
+204,Benin,BJ,BEN,Africa,true
+208,Denmark,DK,DNK,Europe,true
+212,Dominica,DM,DMA,Americas,true
+214,Dominican Rep.,DO,DOM,Americas,true
+218,Ecuador,EC,ECU,Americas,true
+222,El Salvador,SV,SLV,Americas,true
+226,Equatorial Guinea,GQ,GNQ,Africa,true
+231,Ethiopia,ET,ETH,Africa,true
+232,Eritrea,ER,ERI,Africa,true
+233,Estonia,EE,EST,Europe,true
+238,Falkland Isds (Malvinas),FK,FLK,Americas,true
+242,Fiji,FJ,FJI,Oceania,true
+246,Finland,FI,FIN,Europe,true
+251,France,FR,FRA,Europe,true
+258,French Polynesia,PF,PYF,Oceania,true
+260,Fr. South Antarctic Terr.,TF,ATF,Africa,true
+262,Djibouti,DJ,DJI,Africa,true
+266,Gabon,GA,GAB,Africa,true
+268,Georgia,GE,GEO,Asia,true
+270,Gambia,GM,GMB,Africa,true
+275,State of Palestine,PS,PSE,Asia,true
+276,Germany,DE,DEU,Europe,true
+288,Ghana,GH,GHA,Africa,true
+292,Gibraltar,GI,GIB,Europe,true
+296,Kiribati,KI,KIR,Oceania,true
+300,Greece,GR,GRC,Europe,true
+304,Greenland,GL,GRL,Americas,true
+308,Grenada,GD,GRD,Americas,true
+316,Guam,GU,GUM,Oceania,true
+320,Guatemala,GT,GTM,Americas,true
+324,Guinea,GN,GIN,Africa,true
+328,Guyana,GY,GUY,Americas,true
+332,Haiti,HT,HTI,Americas,true
+340,Honduras,HN,HND,Americas,true
+344,"China, Hong Kong SAR",HK,HKG,Asia,true
+348,Hungary,HU,HUN,Europe,true
+352,Iceland,IS,ISL,Europe,true
+360,Indonesia,ID,IDN,Asia,true
+364,Iran,IR,IRN,Asia,true
+368,Iraq,IQ,IRQ,Asia,true
+372,Ireland,IE,IRL,Europe,true
+376,Israel,IL,ISR,Asia,true
+380,Italy,IT,ITA,Europe,true
+384,CÃ´te d'Ivoire,CI,CIV,Africa,true
+388,Jamaica,JM,JAM,Americas,true
+392,Japan,JP,JPN,Asia,true
+398,Kazakhstan,KZ,KAZ,Asia,true
+400,Jordan,JO,JOR,Asia,true
+404,Kenya,KE,KEN,Africa,true
+408,Dem. People's Rep. of Korea,KP,PRK,Asia,true
+410,Rep. of Korea,KR,KOR,Asia,true
+414,Kuwait,KW,KWT,Asia,true
+417,Kyrgyzstan,KG,KGZ,Asia,true
+418,Lao People's Dem. Rep.,LA,LAO,Asia,true
+422,Lebanon,LB,LBN,Asia,true
+426,Lesotho,LS,LSO,Africa,true
+428,Latvia,LV,LVA,Europe,true
+430,Liberia,LR,LBR,Africa,true
+434,Libya,LY,LBY,Africa,true
+440,Lithuania,LT,LTU,Europe,true
+442,Luxembourg,LU,LUX,Europe,true
+446,"China, Macao SAR",MO,MAC,Asia,true
+450,Madagascar,MG,MDG,Africa,true
+454,Malawi,MW,MWI,Africa,true
+458,Malaysia,MY,MYS,Asia,true
+462,Maldives,MV,MDV,Asia,true
+466,Mali,ML,MLI,Africa,true
+470,Malta,MT,MLT,Europe,true
+478,Mauritania,MR,MRT,Africa,true
+480,Mauritius,MU,MUS,Africa,true
+484,Mexico,MX,MEX,Americas,true
+490,"Other Asia, nes",,S19,Unmapped / special area,false
+496,Mongolia,MN,MNG,Asia,true
+498,Rep. of Moldova,MD,MDA,Europe,true
+499,Montenegro,ME,MNE,Europe,true
+500,Montserrat,MS,MSR,Americas,true
+504,Morocco,MA,MAR,Africa,true
+508,Mozambique,MZ,MOZ,Africa,true
+512,Oman,OM,OMN,Asia,true
+516,Namibia,,NAM,Africa,true
+520,Nauru,NR,NRU,Oceania,true
+524,Nepal,NP,NPL,Asia,true
+528,Netherlands,NL,NLD,Europe,true
+531,CuraÃ§ao,CW,CUW,Americas,true
+533,Aruba,AW,ABW,Americas,true
+534,Saint Maarten,SX,SXM,Americas,true
+535,Bonaire,BQ,BES,Americas,true
+540,New Caledonia,NC,NCL,Oceania,true
+548,Vanuatu,VU,VUT,Oceania,true
+554,New Zealand,NZ,NZL,Oceania,true
+558,Nicaragua,NI,NIC,Americas,true
+562,Niger,NE,NER,Africa,true
+566,Nigeria,NG,NGA,Africa,true
+570,Niue,NU,NIU,Oceania,true
+574,Norfolk Isds,NF,NFK,Oceania,true
+579,Norway,NO,NOR,Europe,true
+580,N. Mariana Isds,MP,MNP,Oceania,true
+583,FS Micronesia,FM,FSM,Oceania,true
+584,Marshall Isds,MH,MHL,Oceania,true
+585,Palau,PW,PLW,Oceania,true
+586,Pakistan,PK,PAK,Asia,true
+591,Panama,PA,PAN,Americas,true
+598,Papua New Guinea,PG,PNG,Oceania,true
+600,Paraguay,PY,PRY,Americas,true
+604,Peru,PE,PER,Americas,true
+608,Philippines,PH,PHL,Asia,true
+612,Pitcairn,PN,PCN,Oceania,true
+616,Poland,PL,POL,Europe,true
+620,Portugal,PT,PRT,Europe,true
+624,Guinea-Bissau,GW,GNB,Africa,true
+626,Timor-Leste,TL,TLS,Asia,true
+634,Qatar,QA,QAT,Asia,true
+642,Romania,RO,ROU,Europe,true
+643,Russian Federation,RU,RUS,Europe,true
+646,Rwanda,RW,RWA,Africa,true
+652,Saint BarthÃ©lemy,BL,BLM,Americas,true
+654,Saint Helena,SH,SHN,Africa,true
+659,Saint Kitts and Nevis,KN,KNA,Americas,true
+660,Anguilla,AI,AIA,Americas,true
+662,Saint Lucia,LC,LCA,Americas,true
+666,Saint Pierre and Miquelon,PM,SPM,Americas,true
+670,Saint Vincent and the Grenadines,VC,VCT,Americas,true
+674,San Marino,SM,SMR,Europe,true
+678,Sao Tome and Principe,ST,STP,Africa,true
+682,Saudi Arabia,SA,SAU,Asia,true
+686,Senegal,SN,SEN,Africa,true
+688,Serbia,RS,SRB,Europe,true
+690,Seychelles,SC,SYC,Africa,true
+694,Sierra Leone,SL,SLE,Africa,true
+699,India,IN,IND,Asia,true
+702,Singapore,SG,SGP,Asia,true
+703,Slovakia,SK,SVK,Europe,true
+704,Viet Nam,VN,VNM,Asia,true
+705,Slovenia,SI,SVN,Europe,true
+706,Somalia,SO,SOM,Africa,true
+710,South Africa,ZA,ZAF,Africa,true
+716,Zimbabwe,ZW,ZWE,Africa,true
+724,Spain,ES,ESP,Europe,true
+728,South Sudan,SS,SSD,Africa,true
+729,Sudan,SD,SDN,Africa,true
+740,Suriname,SR,SUR,Americas,true
+748,Eswatini,SZ,SWZ,Africa,true
+752,Sweden,SE,SWE,Europe,true
+757,Switzerland,CH,CHE,Europe,true
+760,Syria,SY,SYR,Asia,true
+762,Tajikistan,TJ,TJK,Asia,true
+764,Thailand,TH,THA,Asia,true
+768,Togo,TG,TGO,Africa,true
+772,Tokelau,TK,TKL,Oceania,true
+776,Tonga,TO,TON,Oceania,true
+780,Trinidad and Tobago,TT,TTO,Americas,true
+784,United Arab Emirates,AE,ARE,Asia,true
+788,Tunisia,TN,TUN,Africa,true
+792,TÃ¼rkiye,TR,TUR,Asia,true
+795,Turkmenistan,TM,TKM,Asia,true
+796,Turks and Caicos Isds,TC,TCA,Americas,true
+798,Tuvalu,TV,TUV,Oceania,true
+800,Uganda,UG,UGA,Africa,true
+804,Ukraine,UA,UKR,Europe,true
+807,North Macedonia,MK,MKD,Europe,true
+818,Egypt,EG,EGY,Africa,true
+826,United Kingdom,GB,GBR,Europe,true
+834,United Rep. of Tanzania,TZ,TZA,Africa,true
+842,USA,US,USA,Americas,true
+854,Burkina Faso,BF,BFA,Africa,true
+858,Uruguay,UY,URY,Americas,true
+860,Uzbekistan,UZ,UZB,Asia,true
+862,Venezuela,VE,VEN,Americas,true
+876,Wallis and Futuna Isds,WF,WLF,Oceania,true
+882,Samoa,WS,WSM,Oceania,true
+887,Yemen,YE,YEM,Asia,true
+894,Zambia,ZM,ZMB,Africa,true

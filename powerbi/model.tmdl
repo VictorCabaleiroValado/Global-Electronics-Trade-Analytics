@@ -1,0 +1,47 @@
+createOrReplace
+	ref table Trade
+		measure 'Trade Value USD' = CALCULATE(SUM(Trade[trade_value_usd]), Trade[direction] = SELECTEDVALUE(Direction[direction], "Imports"))
+			formatString: $#,##0;($#,##0);$0
+		measure 'Previous Year USD' = VAR Y = SELECTEDVALUE('Year'[year]) RETURN IF(NOT ISBLANK(Y), CALCULATE([Trade Value USD], REMOVEFILTERS('Year'), 'Year'[year] = Y - 1))
+			formatString: $#,##0
+		measure 'YoY Growth' = IF(HASONEVALUE('Year'[year]), DIVIDE([Trade Value USD] - [Previous Year USD], [Previous Year USD]))
+			formatString: 0.0%;-0.0%;0.0%
+		measure 'Partner HHI' = VAR T = CALCULATE([Trade Value USD], REMOVEFILTERS(Partner)) VAR P = CALCULATETABLE(ADDCOLUMNS(VALUES(Partner[country_code]), "V", [Trade Value USD]), REMOVEFILTERS(Partner)) RETURN IF(T > 0, 10000 * SUMX(P, POWER(DIVIDE([V], T), 2)))
+			formatString: #,##0
+		measure 'Top Partner Share' = VAR T = CALCULATE([Trade Value USD], REMOVEFILTERS(Partner)) VAR P = CALCULATETABLE(ADDCOLUMNS(VALUES(Partner[country_code]), "V", [Trade Value USD]), REMOVEFILTERS(Partner)) RETURN DIVIDE(MAXX(P, [V]), T)
+			formatString: 0.0%
+		measure 'Weight Tonnes' = CALCULATE(SUM(Trade[weight_tonnes]), Trade[direction] = SELECTEDVALUE(Direction[direction], "Imports"))
+			formatString: #,##0
+		measure 'Weight Coverage' = VAR D = SELECTEDVALUE(Direction[direction], "Imports") RETURN DIVIDE(CALCULATE(COUNTROWS(Trade), Trade[direction] = D, Trade[has_weight] = TRUE()), CALCULATE(COUNTROWS(Trade), Trade[direction] = D))
+			formatString: 0.0%
+		measure 'Selected Metric' = SWITCH(SELECTEDVALUE(Metric[metric], "Trade value (USD)"), "Trade value (USD)", [Trade Value USD], "YoY growth", [YoY Growth], "Partner concentration (HHI)", [Partner HHI])
+			formatString: #,##0.0
+		measure 'Country Rank' = IF(NOT ISBLANK([Selected Metric]), RANKX(ALLSELECTED(Country), [Selected Metric], , DESC, DENSE))
+			formatString: 0
+		measure 'Country Title' = SELECTEDVALUE(Country[country_name], "Selected markets")
+		measure 'Metric Title' = SELECTEDVALUE(Metric[metric], "Trade value (USD)") & " | " & SELECTEDVALUE(Direction[direction], "Imports")
+		measure 'Active Partners' = COUNTROWS(FILTER(VALUES(Partner[country_code]), [Trade Value USD] > 0))
+			formatString: #,##0
+		measure 'Trend Value USD' = VAR Y = SELECTEDVALUE(TrendYear[year]) RETURN CALCULATE([Trade Value USD], REMOVEFILTERS('Year'), 'Year'[year] = Y)
+			formatString: $#,##0
+	table TrendYear
+		column year
+			dataType: int64
+			formatString: 0
+			summarizeBy: none
+			sourceColumn: [year]
+		partition TrendYear = calculated
+			mode: import
+			source = SELECTCOLUMNS('Year', "year", 'Year'[year])
+	relationship Trade_Country
+		fromColumn: Trade.country_code
+		toColumn: Country.country_code
+	relationship Trade_Partner
+		fromColumn: Trade.partner_code
+		toColumn: Partner.country_code
+	relationship Trade_Product
+		fromColumn: Trade.hs6
+		toColumn: Product.hs6
+	relationship Trade_Year
+		fromColumn: Trade.year
+		toColumn: Year.year

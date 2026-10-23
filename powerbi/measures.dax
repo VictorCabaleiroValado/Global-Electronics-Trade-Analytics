@@ -1,0 +1,67 @@
+// Prepared for native semantic-model authoring; NOT deployed or UI-tested yet.
+// Tables: Trade, Country, Partner, Product, Year; disconnected Metric + Direction.
+// Single-direction enforcement prevents summing both representations of each flow.
+
+Trade Value USD =
+VAR ChosenDirection = SELECTEDVALUE(Direction[direction], "Imports")
+RETURN CALCULATE(SUM(Trade[trade_value_usd]), Trade[direction] = ChosenDirection)
+
+Previous Year USD =
+VAR SelectedYear = SELECTEDVALUE('Year'[year])
+RETURN IF(NOT ISBLANK(SelectedYear),
+    CALCULATE([Trade Value USD], REMOVEFILTERS('Year'), 'Year'[year] = SelectedYear - 1))
+
+YoY Growth =
+IF(HASONEVALUE('Year'[year]), DIVIDE([Trade Value USD] - [Previous Year USD], [Previous Year USD]))
+
+Partner HHI =
+VAR TotalValue = CALCULATE([Trade Value USD], REMOVEFILTERS(Partner))
+VAR PartnerValues = CALCULATETABLE(
+    ADDCOLUMNS(VALUES(Partner[country_code]), "PartnerValue", [Trade Value USD]),
+    REMOVEFILTERS(Partner))
+RETURN IF(TotalValue > 0,
+    10000 * SUMX(PartnerValues, POWER(DIVIDE([PartnerValue], TotalValue), 2)))
+
+Top Partner Share =
+VAR TotalValue = CALCULATE([Trade Value USD], REMOVEFILTERS(Partner))
+VAR PartnerValues = CALCULATETABLE(
+    ADDCOLUMNS(VALUES(Partner[country_code]), "PartnerValue", [Trade Value USD]),
+    REMOVEFILTERS(Partner))
+RETURN DIVIDE(MAXX(PartnerValues, [PartnerValue]), TotalValue)
+
+Weight Tonnes =
+VAR ChosenDirection = SELECTEDVALUE(Direction[direction], "Imports")
+RETURN CALCULATE(SUM(Trade[weight_tonnes]), Trade[direction] = ChosenDirection)
+
+Weight Coverage =
+VAR ChosenDirection = SELECTEDVALUE(Direction[direction], "Imports")
+VAR AllFlows = CALCULATE(COUNTROWS(Trade), Trade[direction] = ChosenDirection)
+VAR KnownFlows = CALCULATE(COUNTROWS(Trade), Trade[direction] = ChosenDirection, Trade[has_weight] = TRUE())
+RETURN DIVIDE(KnownFlows, AllFlows)
+
+Selected Metric =
+SWITCH(SELECTEDVALUE(Metric[metric], "Trade value (USD)"),
+    "Trade value (USD)", [Trade Value USD],
+    "YoY growth", [YoY Growth],
+    "Partner concentration (HHI)", [Partner HHI])
+
+Country Rank =
+IF(NOT ISBLANK([Selected Metric]),
+    RANKX(ALLSELECTED(Country[country_code], Country[country_name]), [Selected Metric], , DESC, DENSE))
+
+// Metric table rows: Trade value (USD), YoY growth, Partner concentration (HHI).
+// Direction table rows: Imports, Exports.
+// HHI is geographic trade concentration, not company-supplier risk or disruption probability.
+
+
+Trend Value USD =
+// Use a disconnected TrendYear table on the trend axis so the year slicer does not
+// truncate country-detail and tooltip history. Country/product context remains.
+VAR TrendYearValue = SELECTEDVALUE(TrendYear[year])
+RETURN CALCULATE([Trade Value USD], REMOVEFILTERS('Year'), 'Year'[year] = TrendYearValue)
+
+Country Title =
+SELECTEDVALUE(Country[country_name], "Selected markets")
+
+Metric Title =
+SELECTEDVALUE(Metric[metric], "Trade value (USD)") & " | " & SELECTEDVALUE(Direction[direction], "Imports")

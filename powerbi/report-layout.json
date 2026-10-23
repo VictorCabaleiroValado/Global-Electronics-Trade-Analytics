@@ -1,0 +1,133 @@
+{
+  "status": "native_report_saved_and_reloaded_2026_10_22",
+  "canvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "default_filters": {
+    "year": 2024,
+    "direction": "Imports",
+    "metric": "Trade value (USD)"
+  },
+  "navigation": "One visible Global Network page; three metric buttons; hidden Country Profile and Country Tooltip",
+  "pages": [
+    {
+      "name": "Global Network",
+      "visuals": [
+        "Six dark KPI cards",
+        "Azure Maps integrated with dynamic country ranking",
+        "Product portfolio pie (user-selected format)",
+        "2012–2024 horizontal stacked bars by Country.region, linear USD billions",
+        "Growth/HHI bubble scatter with vertical zoom"
+      ],
+      "interactions": [
+        "metric selector",
+        "connected country/region/product/year/direction filters",
+        "map-to-report cross-filter",
+        "country drill-through from map and ranking",
+        "verified country-name, KPI and historical trend report tooltip"
+      ],
+      "layout": {
+        "map": [
+          24,
+          270,
+          1040,
+          430
+        ],
+        "ranking": [
+          1064,
+          270,
+          832,
+          430
+        ],
+        "product": [
+          24,
+          720,
+          584,
+          285
+        ],
+        "trend": [
+          618,
+          720,
+          714,
+          285
+        ],
+        "scatter": [
+          1342,
+          720,
+          554,
+          285
+        ]
+      }
+    },
+    {
+      "name": "Country Profile",
+      "hidden": true,
+      "type": "drillthrough",
+      "drillthrough_fields": [
+        "Country.country_name",
+        "Country.map_iso3"
+      ]
+    },
+    {
+      "name": "Country Tooltip",
+      "hidden": true,
+      "type": "tooltip"
+    }
+  ],
+  "relationships": {
+    "Country.country_code": "Trade.country_code",
+    "Partner.country_code": "Trade.partner_code",
+    "Product.hs6": "Trade.hs6",
+    "Year.year": "Trade.year"
+  },
+  "disconnected_tables": [
+    "Metric",
+    "Direction",
+    "TrendYear"
+  ],
+  "filter_direction": "single, dimension to fact",
+  "acceptance": "Each requested interaction must be verified in native Power BI before completion.",
+  "trend_axis": "TrendYear.year continuous; Trade.Trend Value USD; Country.region legend. All 13 years retained while respecting country, region, product and direction.",
+  "metric_formats": {
+    "Trade value (USD)": "$#,0,,.0M",
+    "YoY growth": "0.0%;-0.0%;0.0%",
+    "Partner concentration (HHI)": "#,0"
+  },
+  "map": {
+    "type": "Azure Maps",
+    "location": "Country.map_iso3",
+    "filled_map_color": "Trade.Selected Metric",
+    "palette": [
+      "#65A4D2",
+      "#2E6FAD"
+    ],
+    "labels": true,
+    "world_wrap": false,
+    "auto_zoom": false,
+    "center_latitude": 15,
+    "center_longitude": 0,
+    "zoom_level": 0.97,
+    "tooltip_page": "Country Tooltip",
+    "note": "Natural geographic proportions; viewport can be panned/zoomed. Shape-map geometry retained as unused source asset."
+  },
+  "header": {
+    "asset": "powerbi/azure-header-background.png",
+    "gradient": [
+      "#10263D",
+      "#006CCE"
+    ],
+    "title_color": "#FFFFFF",
+    "reference": "Azure Operations Data Platform/Main/assets/styles.css"
+  },
+  "year_selection": "Single-select, default 2024; annual growth unavailable in 2012 because source starts in 2012.",
+  "metric_buttons": {
+    "selected_fill": "#DBC297",
+    "selected_text": "#173857",
+    "selected_bold": true,
+    "pressed_fill": "#C39A52",
+    "filter_preservation": "Year and Region verified in reader mode"
+  },
+  "country_display": "China; Hong Kong, Macao and Taiwan remain distinct customs economies.",
+  "layout_provenance": "Geometry is from prior agent revision; user subsequently adjusted visual type/map viewport. Current screenshot is authoritative for appearance."
+}
