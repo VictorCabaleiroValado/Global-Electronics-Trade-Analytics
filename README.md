@@ -1,10 +1,10 @@
-# Global Trade & Supply Chain Analytics
+# Power BI Global Trade Electronic Analytics
 
 An end-to-end personal analytics project by Victor Cabaleiro Valado, connecting **BigQuery, SQL, Power Query, DAX and Power BI** to explore global electronics and telecommunications trade.
 
 ![Trade value view](docs/screenshots/trade-value.png)
 
-[Open Power BI report (authenticated access)](https://app.powerbi.com/groups/22ef7458-6c58-46dd-b0f7-73e14c727807/reports/6112f7e8-a23c-4997-ad60-0dfb299e2d23/bb9c35bd2a550ad30ff1)
+[Open Power BI report (public interactive report)](https://app.powerbi.com/view?r=eyJrIjoiOTllMDUzMmYtYWIyZC00NDc0LTk0YTYtYzU5MmRlMDVlYWJlIiwidCI6Ijc5Yzc0MmM0LWU2MWMtNGZhNS1iZTg5LWEzY2I1NjZhODBkMSIsImMiOjN9)
 
 ## Business questions
 
@@ -44,4 +44,4 @@ The native report is authored in Power BI Service. Local model/design files are 
 
 BACI source values are thousands of current USD and metric tons; reporting values convert USD by multiplying by 1,000. Imports and exports are alternative perspectives, not additive global totals. Missing weight is not zero. Nominal trade growth is not inflation-adjusted growth. HHI describes concentration, not the probability of disruption. These country-level annual trade data do not provide company revenue, inventory, shipment delays, OTIF or real-time logistics. No predictive AI model is claimed.
 
-Public report access has not been enabled: the native link may require permission. The cover is a real screenshot with Trade value selected.
+The native report is published to the public web and opens without signing in. The cover is a real screenshot with Trade value selected.
