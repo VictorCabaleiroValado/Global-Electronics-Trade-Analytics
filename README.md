@@ -1,4 +1,4 @@
-# Power BI Global Trade Electronic Analytics
+# Global Electronics Trade & Supply Chain Analytics | BigQuery, Power BI & SQL
 
 An end-to-end personal analytics project by Victor Cabaleiro Valado, connecting **BigQuery, SQL, Power Query, DAX and Power BI** to explore global electronics and telecommunications trade.
 
