@@ -2,7 +2,7 @@
 
 An end-to-end personal analytics project by Victor Cabaleiro Valado, connecting **BigQuery, SQL, Power Query, DAX and Power BI** to explore global electronics and telecommunications trade.
 
-![Trade value view](docs/screenshots/trade-value.png)
+![Trade value view](docs/screenshots/trade-value.png?v=e208754b)
 
 [Open Power BI report (public interactive report)](https://app.powerbi.com/view?r=eyJrIjoiOTllMDUzMmYtYWIyZC00NDc0LTk0YTYtYzU5MmRlMDVlYWJlIiwidCI6Ijc5Yzc0MmM0LWU2MWMtNGZhNS1iZTg5LWEzY2I1NjZhODBkMSIsImMiOjN9)
 
